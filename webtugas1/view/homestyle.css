@@ -1,0 +1,319 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 55px;
+    text-align: center;
+    margin-top: -400px;
+}
+
+p {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+}
+/* Navbar */
+header {
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 10px 0;
+    height: 70px; /* Pastikan cukup tinggi */
+    display: flex;
+    align-items: center; /* Pastikan isinya sejajar */
+}
+
+/* Container di dalam Navbar */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo */
+.logo-app {
+    width: 100px;
+    height: auto;
+    display: flex;
+    align-items: center;
+
+}
+
+/* Navbar Menu */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center; /* Pastikan link tetap sejajar */
+    margin: 0;
+    padding: 0;
+    margin-top: 30px;
+}
+
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #9d00ff;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('../image/bghomee.png') no-repeat center center;
+    background-size: cover;
+    min-height: 160vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* Extra Section */
+.extra-section {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    min-height: 10vh;
+    box-shadow: 
+        inset 0px 0px 70px rgba(200, 0, 255, 0.475),
+        0px 0px 40px 10px rgba(204, 0, 255, 0.6);
+}
+
+/* Bottom Section */
+.bottom-section {
+    background: url('../image/bgbawahbar.png') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+/* Wrapper untuk Team dan Company agar sejajar */
+.bottom-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* ---- TEAM CARD (Kiri) ---- */
+.team-container {
+    flex: 1;
+    text-align: center;
+}
+
+.team-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: rgba(9, 9, 9, 0.43);
+    padding: 60px;
+    border-radius: 18px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 280px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px 5px rgba(200, 0, 255, 0.8);
+}
+
+/* Gambar dalam team card */
+.card img {
+    background-color: #9d00ff70;
+    width: 280px;
+    height: 350px;
+    border-radius: 10%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    font-family: 'poppins', sans-serif;
+}
+
+
+.company-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* ---- COMPANY CARD (Kanan) ---- */
+.company-card {
+    background: rgba(9, 9, 9, 0.6);
+    padding: 30px;
+    border-radius: 18px;
+    text-align: left;
+    width: 100%;  /* Membuatnya lebih lebar */
+    max-width: 800px; /* Batasi agar tidak terlalu panjang */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Kotak ungu di dalam Company Card */
+.company-content {
+    background: rgba(157, 0, 255, 0.364);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: inset 0px 0px 15px rgba(255, 255, 255, 0.3);
+    width: 100%;  /* Menggunakan lebar penuh */
+    max-width: 700px; /* Batasi lebar */
+    color: white;
+}
+
+.company-content p {
+    font-size: 20px;
+    color: white;
+    text-align: justify;
+}
+
+@media (max-width: 992px) {
+    .bottom-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .team-container,
+    .company-container {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .company-container {
+        margin-top: 30px;
+    }
+}
+
+/* Wrapper untuk slider - Buat selebar layar penuh */
+.hero-slider {
+    position: absolute; /* Keluar dari flow normal */
+    left: 0;
+    width: 100vw; /* Gunakan 100% dari viewport */
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* Container untuk gambar-gambar */
+.hero-slider .slider-track {
+    display: flex;
+    width: calc(250px * 12); /* Gandakan jumlah gambar */
+    animation: slide 10s linear infinite; /* Loop animasi */
+}
+
+/* Style gambar */
+.hero-slider img {
+    width: 250px;
+    height: auto;
+    margin: 0 10px;
+    border-radius: 8px;
+}
+
+/* Animasi geser */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-1560px); } /* Geser sepanjang 6 gambar */
+}
+
+/* Tombol "Get Started" */
+.hero-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+.btn-get-started {
+    background: #ffffff70;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    padding: 12px 24px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.308);
+    position: relative;
+    animation: shineEffect 2s infinite alternate;
+}
+
+/* Animasi Shine + Inner Glow */
+@keyframes shineEffect {
+    0% {
+        filter: brightness(1) blur(0);
+        box-shadow: 
+            0 0 10px rgba(191, 0, 255, 0.5), 
+            0 0 10px rgba(204, 0, 255, 0.367), 
+            0 0 10px rgba(221, 0, 255, 0.307),
+            inset 0 0 5px rgba(242, 0, 255, 0.99); /* Inner Glow */
+    }
+    50% {
+        filter: brightness(1.5) blur(0);
+        box-shadow: 
+            0 0 20px rgba(157, 0, 255, 0.7), 
+            0 0 30px rgba(157, 0, 255, 0.5), 
+            0 0 10px rgba(157, 0, 255, 0.3),
+            inset 0 0 10px rgba(157, 0, 255, 0.7); /* Inner Glow */
+    }
+    100% {
+        filter: brightness(1) blur(0);
+        box-shadow: 
+            0 0 10px rgba(174, 0, 255, 0.5), 
+            0 0 10px rgba(238, 0, 255, 0.438), 
+            0 0 10px rgba(230, 0, 255, 0.712),
+            inset 0 0 5px rgba(174, 0, 255, 0.5); /* Inner Glow */
+    }
+}
+
+.btn-get-started:hover {
+    transform: scale(1.05);
+    background: rgb(225, 30, 255);
+    color: #ffffff;
+    font-weight: 600;
+    box-shadow: 
+        0px 0px 20px rgb(224, 100, 255),
+        inset 0 0 10px rgb(224, 100, 255); /* Inner Glow saat hover */
+}

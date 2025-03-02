@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('../image/bglogin.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.logo-app {
+    display: block;
+    margin: 0 auto -20px auto; /* Kurangi jarak bawah */
+    width: 130px; /* Sesuaikan ukuran */
+    height: auto;
+    margin-top: -30px;
+}
+
+
+.login-container {
+    width: 900px; 
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.384);
+    overflow: hidden;
+    background-color: #00000070;
+}
+
+.content-wrapper {
+    display: flex;
+}
+
+
+.left-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 40px;
+}
+
+.login-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+.right-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-content {
+    width: 80%;
+}
+
+input {
+    background-color: black;
+    width: 93%;
+    padding: 12px;
+    color: white;
+    font-size: 16px;
+    margin: 15px 0;
+    border: 1px solid #00000060;
+    border-radius: 20px;
+    transition: 0.3s ease-in-out; 
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.568);
+    opacity: 1; /* Placeholder awal dalam keadaan penuh */
+    transition: opacity 0.3s ease-in-out; /* Efek transisi untuk perubahan opacity */
+}
+
+
+input:hover {
+    transform: scale(1.05); 
+    border-color: #be56ffb0;
+    box-shadow: 0px 0px 10px rgba(157, 0, 255, 0.7); 
+}
+
+input:focus {
+    transform: scale(1.08); 
+    border-color: #9d00ff; 
+    outline: none; 
+    box-shadow: 0px 0px 10px rgba(157, 0, 255, 0.7); 
+}
+
+input:hover::placeholder {
+    opacity: 0; /* Placeholder akan memudar saat kursor hover */
+}
+
+input:focus::placeholder {
+    opacity: 0; /* Placeholder akan memudar saat input difokuskan */
+}
+
+label {
+    color: white;
+}
+
+.welcome-text {
+    margin-top: 10px; /* Kurangi jarak atas */
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.please-text {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 40px;
+    margin-top: 0px;
+}
+
+.button-signin button {
+    width: 60%;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #92929258;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.3s ease-in-out; /* Efek transisi */
+}
+
+.button-signin button:hover {
+    background-color: #9d00ff;
+    transform: scale(1.05); /* Efek zoom-in */
+    box-shadow: 0px 0px 10px rgba(196, 100, 255, 0.827); /* Efek bayangan */
+}
+
+.button-signin {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+
+
+/* Style container tombol sosial media */
+.social-login {
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Style teks "Atau login dengan:" */
+.social-login p {
+    font-size: 14px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* Grup tombol sosial media */
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Jarak antar tombol */
+}
+
+/* Style tombol sosial media */
+.social-buttons button {
+    width: 40px;  /* Ukuran lebih besar */
+    height: 40px;
+    padding: 10px; /* Ruang dalam untuk ikon */
+    border: none;
+    border-radius: 50%; /* Bentuk bulat */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white; /* Background putih */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    transition: 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.social-buttons button:hover {
+    transform: scale(1.2); /* Efek membesar saat hover */
+    box-shadow: 0px 0px 10px rgb(255, 255, 255); /* Efek bayangan */
+}
+
+
+/* Ukuran gambar dalam tombol */
+.google-btn img {
+    width: 120%; /* Perkecil ikon agar tidak full */
+    height: 120%;
+    object-fit: contain; /* Jaga agar gambar tetap proporsional */
+    border-radius: 50%;
+}
+
+.facebook-btn img {
+    width: 120%; /* Perkecil ikon agar tidak full */
+    height: 120%;
+    object-fit: contain; /* Jaga agar gambar tetap proporsional */
+    border-radius: 50%;
+}
+
+.twitter-btn img {
+    width: 150%; /* Perkecil ikon agar tidak full */
+    height: 150%;
+    object-fit: contain; /* Jaga agar gambar tetap proporsional */
+    border-radius: 50%;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-5px); }
+    40% { transform: translateX(5px); }
+    60% { transform: translateX(-5px); }
+    80% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    animation: shake 0.3s ease-in-out;
+}
+
+.error-msg {
+    text-align: center;
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+@keyframes shineEffect {
+    0% {
+        filter: brightness(1) blur(0);
+        box-shadow: 0 0 10px rgba(191, 0, 255, 0.5), 0 0 10px rgba(204, 0, 255, 0.367), 0 0 10px rgba(221, 0, 255, 0.307);
+    }
+    50% {
+        filter: brightness(1.5) blur(0); /* Efek mengkilat pada gambar */
+        box-shadow: 0 0 20px rgba(157, 0, 255, 0.7), 0 0 30px rgba(157, 0, 255, 0.5), 0 0 10px rgba(157, 0, 255, 0.3); /* Glowing luar gambar */
+    }
+    100% {
+        filter: brightness(1) blur(0);
+        box-shadow: 0 0 10px rgba(174, 0, 255, 0.5), 0 0 10px rgba(238, 0, 255, 0.438), 0 0 10px rgba(230, 0, 255, 0.712);
+    }
+}
+
+.left-content .login-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 15px;
+    animation: shineEffect 2s infinite alternate; /* Animasi dengan efek dalam dan luar gambar */
+}
+
